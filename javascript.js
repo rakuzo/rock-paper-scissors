@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 
 // Make input case-insensitive
 function getPlayerChoice () {
-    let playerInput = "ROCk"; //Input User choice
+    let playerInput = prompt("What's your choice?"); //Input User choice
     let lower = playerInput.toLowerCase();
     let capital = lower.charAt(0).toUpperCase() + lower.slice(1);
     return capital;
