@@ -8,8 +8,13 @@ function getComputerChoice () {
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
-        console.log("You Win!");
+        console.log("You Win! " + playerSelection + " beat " + computerSelection);
     } else {
-        console.log("You Lose!");
+        console.log("You Lose! " + computerSelection + " beat " + playerSelection);
     }
 }
+
+let computerSelection = getComputerChoice();
+let playerSelection = "Rock";
+
+playRound(playerSelection, computerSelection);
