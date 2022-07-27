@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//Make input case-insensitive
+// Make input case-insensitive
 function getPlayerChoice () {
     let playerInput = "ROCk"; //Input User choice
     let lower = playerInput.toLowerCase();
@@ -35,4 +35,4 @@ function getPlayerChoice () {
 let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
