@@ -32,7 +32,7 @@ function getPlayerChoice () {
     return capital;
 }
 
-// This makes +1 input so comment It
+// This makes +1 input prompt so comment It
 // let computerSelection = getComputerChoice();
 // let playerSelection = getPlayerChoice();
 
