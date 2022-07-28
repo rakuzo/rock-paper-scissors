@@ -1,6 +1,6 @@
 //Randomly Pick Rock, Paper, or Scissor
 function getComputerChoice () {
-    let choice = ["Rock", "Paper", "Scissor"];
+    const choice = ["Rock", "Paper", "Scissor"];
     let randChoice = choice[Math.floor(Math.random() * choice.length)];
     return randChoice;
 }
@@ -8,19 +8,26 @@ function getComputerChoice () {
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
-        return("You Win! " + playerSelection + " beat " + computerSelection);
+        return (1);
+        // return("You Win! " + playerSelection + " beat " + computerSelection);
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
-        return("You Win! " + playerSelection + " beat " + computerSelection);
+        return (1);
+        // return("You Win! " + playerSelection + " beat " + computerSelection);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        return("You Win! " + playerSelection + " beat " + computerSelection)
+        return (1);
+        // return("You Win! " + playerSelection + " beat " + computerSelection)
     } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-        return("You Draw! " + playerSelection + " draw against " + computerSelection)
+        return (0);
+        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-        return("You Draw! " + playerSelection + " draw against " + computerSelection)
+        return (0);
+        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else if (playerSelection === "Scissor" && computerSelection === "Scissor") {
-        return("You Draw! " + playerSelection + " draw against " + computerSelection)
+        return (0);
+        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else {
-        return("You Lose! " + computerSelection + " beat " + playerSelection);
+        return (-1);
+        // return("You Lose! " + computerSelection + " beat " + playerSelection);
     }
 }
 
@@ -39,15 +46,18 @@ function getPlayerChoice () {
 // console.log(playRound(playerSelection, computerSelection));
 
 function game() {
-    
+    const values = [];    
     for (let i = 0; i < 5; i++) {
         //Move the variable to this
         let computerSelection = getComputerChoice();
         let playerSelection = getPlayerChoice();
 
-        //Can also directly call getPlayerChoice () and also getComputerChoice ()
+        //Can also directly call getPlayerChoice() and also getComputerChoice()
         console.log(playRound(playerSelection, computerSelection));
+        values.push(playRound(playerSelection, computerSelection));
     }
+    console.log(values);
 }
+
 
 game();
