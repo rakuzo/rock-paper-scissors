@@ -32,7 +32,22 @@ function getPlayerChoice () {
     return capital;
 }
 
-let computerSelection = getComputerChoice();
-let playerSelection = getPlayerChoice();
+// This makes +1 input so comment It
+// let computerSelection = getComputerChoice();
+// let playerSelection = getPlayerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    
+    for (let i = 0; i < 5; i++) {
+        //Move the variable to this
+        let computerSelection = getComputerChoice();
+        let playerSelection = getPlayerChoice();
+
+        //Can also directly call getPlayerChoice () and also getComputerChoice ()
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
+
+game();
