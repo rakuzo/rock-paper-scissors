@@ -8,26 +8,26 @@ function getComputerChoice () {
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
+        console.log("You Win! " + playerSelection + " beat " + computerSelection);
         return (1);
-        // return("You Win! " + playerSelection + " beat " + computerSelection);
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
+        console.log("You Win! " + playerSelection + " beat " + computerSelection);
         return (1);
-        // return("You Win! " + playerSelection + " beat " + computerSelection);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        console.log("You Win! " + playerSelection + " beat " + computerSelection);
         return (1);
-        // return("You Win! " + playerSelection + " beat " + computerSelection)
     } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+        console.log("You Draw! " + playerSelection + " draw against " + computerSelection)
         return (0);
-        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+        console.log("You Draw! " + playerSelection + " draw against " + computerSelection);
         return (0);
-        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else if (playerSelection === "Scissor" && computerSelection === "Scissor") {
+        console.log("You Draw! " + playerSelection + " draw against " + computerSelection);
         return (0);
-        // return("You Draw! " + playerSelection + " draw against " + computerSelection)
     } else {
+        console.log("You Lose! " + computerSelection + " beat " + playerSelection);
         return (-1);
-        // return("You Lose! " + computerSelection + " beat " + playerSelection);
     }
 }
 
@@ -53,7 +53,7 @@ function game() {
         let playerSelection = getPlayerChoice();
 
         //Can also directly call getPlayerChoice() and also getComputerChoice()
-        console.log(playRound(playerSelection, computerSelection));
+        //console.log(playRound(playerSelection, computerSelection));
         values.push(playRound(playerSelection, computerSelection));
     }
     return(values);
@@ -68,11 +68,11 @@ function finalResult() {
     }
 
     if (sum === 0) {
-        console.log("You Draw against Computer");
+        console.log("You Draw! against Computer");
     } else if (sum >= 1) {
-        console.log("You Win against Computer");
+        console.log("You Win! against Computer");
     } else {
-        console.log("You Lose against Computer");
+        console.log("You Lose! against Computer");
     }
 }
 
