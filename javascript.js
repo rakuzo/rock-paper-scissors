@@ -59,7 +59,7 @@ function game() {
     return(values);
 }
 
-function finalResult() {
+function getFinalResult() {
     const finArray = game();
     let sum = 0;
 
@@ -76,5 +76,5 @@ function finalResult() {
     }
 }
 
-finalResult();
+getFinalResult();
 // console.log(game());
