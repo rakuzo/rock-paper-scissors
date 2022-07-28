@@ -56,8 +56,25 @@ function game() {
         console.log(playRound(playerSelection, computerSelection));
         values.push(playRound(playerSelection, computerSelection));
     }
-    console.log(values);
+    return(values);
 }
 
+function finalResult() {
+    const finArray = game();
+    let sum = 0;
 
-game();
+    for (let i =0; i < finArray.length; i++) {
+        sum += finArray[i];
+    }
+
+    if (sum === 0) {
+        console.log("You Draw against Computer");
+    } else if (sum >= 1) {
+        console.log("You Win against Computer");
+    } else {
+        console.log("You Lose against Computer");
+    }
+}
+
+finalResult();
+// console.log(game());
