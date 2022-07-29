@@ -53,7 +53,6 @@ function game() {
         let playerSelection = getPlayerChoice();
 
         //Can also directly call getPlayerChoice() and also getComputerChoice()
-        //console.log(playRound(playerSelection, computerSelection));
         values.push(playRound(playerSelection, computerSelection));
     }
     return(values);
@@ -77,4 +76,3 @@ function getFinalResult() {
 }
 
 getFinalResult();
-// console.log(game());
