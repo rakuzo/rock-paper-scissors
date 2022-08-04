@@ -21,6 +21,9 @@ const para = document.createElement('p');
 const score = document.querySelector('#score');
 const paraTwo = document.createElement('p');
 
+const result = document.querySelector('#result');
+const paraThree = document.createElement('p');
+
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
@@ -63,6 +66,8 @@ function finalGame (a) {
     if (playerScore === 5) {
         paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
         score.appendChild(paraTwo);
+        paraThree.textContent = `Player Victory! Please refresh to restart the game.`;
+        result.appendChild(paraThree);
         // container.classList.add('disablebtn');
         // alert('Victory!');
         const nodes = document.getElementById("container").getElementsByTagName('*');
@@ -72,6 +77,8 @@ function finalGame (a) {
     } else if (computerScore === 5) {
         paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
         score.appendChild(paraTwo);
+        paraThree.textContent = `Computer Victory! Please refresh to restart the game.`;
+        result.appendChild(paraThree);
         // container.classList.add('disablebtn');
         // alert('Defeat');
         const nodes = document.getElementById("container").getElementsByTagName('*');
