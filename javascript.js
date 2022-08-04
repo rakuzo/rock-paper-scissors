@@ -4,8 +4,8 @@ buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
 
 function getPlayerChoice(e) {
     let playerChoice = this.classList.value;
-    // console.log(this.classList.value);
-    playRound(playerChoice, getComputerChoice())
+    // playRound(playerChoice, getComputerChoice())
+    finalGame(playerChoice);
 }
 
 //Randomly Pick Rock, Paper, or Scissor
@@ -23,32 +23,48 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
-        return (1);
+        playerScore += 1;
+        // return (1);
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
-        return (1);
+        playerScore += 1;
+        // return (1);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
-        return (1);
-    } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
-        result.appendChild(para);
-        return (0);
-    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
-        result.appendChild(para);
-        return (0);
-    } else if (playerSelection === "Scissor" && computerSelection === "Scissor") {
-        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
-        result.appendChild(para);
-        return (0);
-    } else {
+        playerScore += 1;
+        // return (1);
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
         para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
         result.appendChild(para);
-        return (-1);
+        computerScore += 1;
+        // return (0);
+    } else if (playerSelection === "Paper" && computerSelection === "Scissor") {
+        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        result.appendChild(para);
+        computerScore += 1;
+        // return (0);
+    } else if (playerSelection === "Scissor" && computerSelection === "Rock") {
+        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        result.appendChild(para);
+        computerScore += 1;
+        // return (0);
+    } else {
+        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
+        result.appendChild(para);
+        computerScore += 1;
+        // return (-1);
     }
+}
+
+let playerScore = 0;
+let computerScore = 0;
+
+function finalGame (a) {
+    playRound(a, getComputerChoice());
+    console.log(playerScore);
+    console.log(computerScore);
 }
 
 // function game() {
@@ -68,7 +84,7 @@ function playRound(playerSelection, computerSelection) {
 //     const finArray = game();
 //     let sum = 0;
 
-//     for (let i =0; i < finArray.length; i++) {
+//     for (let i = 0; i < finArray.length; i++) {
 //         sum += finArray[i];
 //     }
 
@@ -80,5 +96,3 @@ function playRound(playerSelection, computerSelection) {
 //         console.log("You Lose! against Computer");
 //     }
 // }
-
-// getFinalResult();
