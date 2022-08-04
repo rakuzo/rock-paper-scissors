@@ -1,3 +1,11 @@
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
+
+function getPlayerChoice(e) {
+    console.log(this.classList.value);
+}
+
 //Randomly Pick Rock, Paper, or Scissor
 function getComputerChoice () {
     const choice = ["Rock", "Paper", "Scissor"];
@@ -31,48 +39,35 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Make input case-insensitive
-function getPlayerChoice () {
-    let playerInput = prompt("What's your choice?"); //Input User choice
-    let lower = playerInput.toLowerCase();
-    let capital = lower.charAt(0).toUpperCase() + lower.slice(1);
-    return capital;
-}
 
-// This makes +1 input prompt so comment It
-// let computerSelection = getComputerChoice();
-// let playerSelection = getPlayerChoice();
+// function game() {
+//     const values = [];    
+//     for (let i = 0; i < 5; i++) {
+//         //Move the variable to this
+//         let computerSelection = getComputerChoice();
+//         let playerSelection = getPlayerChoice();
 
-// console.log(playRound(playerSelection, computerSelection));
+//         //Can also directly call getPlayerChoice() and also getComputerChoice()
+//         values.push(playRound(playerSelection, computerSelection));
+//     }
+//     return(values);
+// }
 
-function game() {
-    const values = [];    
-    for (let i = 0; i < 5; i++) {
-        //Move the variable to this
-        let computerSelection = getComputerChoice();
-        let playerSelection = getPlayerChoice();
+// function getFinalResult() {
+//     const finArray = game();
+//     let sum = 0;
 
-        //Can also directly call getPlayerChoice() and also getComputerChoice()
-        values.push(playRound(playerSelection, computerSelection));
-    }
-    return(values);
-}
+//     for (let i =0; i < finArray.length; i++) {
+//         sum += finArray[i];
+//     }
 
-function getFinalResult() {
-    const finArray = game();
-    let sum = 0;
+//     if (sum === 0) {
+//         console.log("You Draw! against Computer");
+//     } else if (sum >= 1) {
+//         console.log("You Win! against Computer");
+//     } else {
+//         console.log("You Lose! against Computer");
+//     }
+// }
 
-    for (let i =0; i < finArray.length; i++) {
-        sum += finArray[i];
-    }
-
-    if (sum === 0) {
-        console.log("You Draw! against Computer");
-    } else if (sum >= 1) {
-        console.log("You Win! against Computer");
-    } else {
-        console.log("You Lose! against Computer");
-    }
-}
-
-getFinalResult();
+// getFinalResult();
