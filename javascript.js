@@ -1,3 +1,4 @@
+// const container = document.querySelector('#container')
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
@@ -62,11 +63,21 @@ function finalGame (a) {
     if (playerScore === 5) {
         paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
         score.appendChild(paraTwo);
+        // container.classList.add('disablebtn');
         // alert('Victory!');
+        const nodes = document.getElementById("container").getElementsByTagName('*');
+        for(let i = 0; i < nodes.length; i++){
+            nodes[i].disabled = true;
+        }
     } else if (computerScore === 5) {
         paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
         score.appendChild(paraTwo);
+        // container.classList.add('disablebtn');
         // alert('Defeat');
+        const nodes = document.getElementById("container").getElementsByTagName('*');
+        for(let i = 0; i < nodes.length; i++){
+            nodes[i].disabled = true;
+        }
     } else {
         paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
         score.appendChild(paraTwo);
