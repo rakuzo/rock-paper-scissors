@@ -15,10 +15,11 @@ function getComputerChoice () {
     return randChoice;
 }
 
-const result = document.querySelector('#result')
+const result = document.querySelector('#result');
 const para = document.createElement('p');
 
-const score = document.querySelector('#score')
+const score = document.querySelector('#score');
+const paraTwo = document.createElement('p');
 
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
@@ -60,12 +61,16 @@ function finalGame (a) {
     playRound(a, getComputerChoice());
     
     if (playerScore === 5) {
+        paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
+        score.appendChild(paraTwo);
         alert('Victory!');
     } else if (computerScore === 5) {
+        paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
+        score.appendChild(paraTwo);
         alert('Defeat');
     } else {
-        console.log(`Player Score ${playerScore}`);
-        console.log(`Computer Score ${computerScore}`);
+        paraTwo.textContent = `Player Score ${playerScore} VS Computer Score ${computerScore}`;
+        score.appendChild(paraTwo);
     }
 }
 
