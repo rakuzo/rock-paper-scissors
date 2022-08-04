@@ -1,4 +1,3 @@
-// const container = document.querySelector('#container')
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
@@ -68,8 +67,7 @@ function finalGame (a) {
         score.appendChild(paraTwo);
         paraThree.textContent = `Player Victory! Please refresh to restart the game.`;
         result.appendChild(paraThree);
-        // container.classList.add('disablebtn');
-        // alert('Victory!');
+        
         const nodes = document.getElementById("container").getElementsByTagName('*');
         for(let i = 0; i < nodes.length; i++){
             nodes[i].disabled = true;
@@ -79,8 +77,7 @@ function finalGame (a) {
         score.appendChild(paraTwo);
         paraThree.textContent = `Computer Victory! Please refresh to restart the game.`;
         result.appendChild(paraThree);
-        // container.classList.add('disablebtn');
-        // alert('Defeat');
+        
         const nodes = document.getElementById("container").getElementsByTagName('*');
         for(let i = 0; i < nodes.length; i++){
             nodes[i].disabled = true;

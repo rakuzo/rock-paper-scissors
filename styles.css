@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: black;
+    color: blueviolet;
+    padding: 10px;
+}
+
+#container,
+#round,
+#score,
+#result {
+    border: 1px solid white;
+    padding: 10px;
+    flex: 1;
+}
+
+#container button {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#container {
+    min-width: 600px;
+    min-height: 150px;
+}
+
+#round {
+    min-width: 600px;
+    min-height: 50px;
+}
+
+#score {
+    min-width: 600px;
+    min-height: 50px;
+}
+
+#result {
+    min-width: 600px;
+    min-height: 50px;
+}
