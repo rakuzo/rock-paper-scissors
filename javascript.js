@@ -18,43 +18,38 @@ function getComputerChoice () {
 const result = document.querySelector('#result')
 const para = document.createElement('p');
 
+const score = document.querySelector('#score')
+
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
         playerScore += 1;
-        // return (1);
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
         playerScore += 1;
-        // return (1);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
         para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
         result.appendChild(para);
         playerScore += 1;
-        // return (1);
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
         para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
         result.appendChild(para);
         computerScore += 1;
-        // return (0);
     } else if (playerSelection === "Paper" && computerSelection === "Scissor") {
         para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
         result.appendChild(para);
         computerScore += 1;
-        // return (0);
     } else if (playerSelection === "Scissor" && computerSelection === "Rock") {
         para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
         result.appendChild(para);
         computerScore += 1;
-        // return (0);
     } else {
-        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
+        para.textContent = `You Tie! Both choose ${computerSelection}`;
         result.appendChild(para);
-        computerScore += 1;
-        // return (-1);
+        computerScore += 0;
     }
 }
 
@@ -63,8 +58,15 @@ let computerScore = 0;
 
 function finalGame (a) {
     playRound(a, getComputerChoice());
-    console.log(playerScore);
-    console.log(computerScore);
+    
+    if (playerScore === 5) {
+        alert('Victory!');
+    } else if (computerScore === 5) {
+        alert('Defeat');
+    } else {
+        console.log(`Player Score ${playerScore}`);
+        console.log(`Computer Score ${computerScore}`);
+    }
 }
 
 // function game() {
