@@ -3,7 +3,9 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
 
 function getPlayerChoice(e) {
-    console.log(this.classList.value);
+    let playerChoice = this.classList.value;
+    // console.log(this.classList.value);
+    playRound(playerChoice, getComputerChoice())
 }
 
 //Randomly Pick Rock, Paper, or Scissor
@@ -34,11 +36,10 @@ function playRound(playerSelection, computerSelection) {
         console.log("You Draw! " + playerSelection + " draw against " + computerSelection);
         return (0);
     } else {
-        console.log("You Lose! " + computerSelection + " beat " + playerSelection);
+        console.log("You Lose! " + playerSelection + " beaten by " + computerSelection);
         return (-1);
     }
 }
-
 
 // function game() {
 //     const values = [];    
