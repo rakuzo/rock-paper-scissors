@@ -16,6 +16,8 @@ function getComputerChoice () {
 
 const round = document.querySelector('#round');
 const para = document.createElement('p');
+const plyChoice = document.querySelector('.plychoice');
+const comChoice = document.querySelector('.comchoice');
 
 const score = document.querySelector('#score');
 const paraTwo = document.createElement('p');
@@ -26,32 +28,58 @@ const paraThree = document.createElement('p');
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
-        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✊`;
+        comChoice.textContent = `✌`;
         playerScore += 1;
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
-        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✌`;
+        comChoice.textContent = `✋`;
         playerScore += 1;
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✋`;
+        comChoice.textContent = `✊`;
         playerScore += 1;
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✊`;
+        comChoice.textContent = `✋`;
         computerScore += 1;
     } else if (playerSelection === "Paper" && computerSelection === "Scissor") {
-        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✋`;
+        comChoice.textContent = `✌`;
         computerScore += 1;
     } else if (playerSelection === "Scissor" && computerSelection === "Rock") {
-        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
-        round.appendChild(para);
+        // para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✌`;
+        comChoice.textContent = `✊`;
         computerScore += 1;
-    } else {
-        para.textContent = `You Tie! Both choose ${computerSelection}`;
-        round.appendChild(para);
+    } else if (playerSelection === "Scissor" && computerSelection === "Scissor") {
+        // para.textContent = `You Tie! Both choose ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✌`;
+        comChoice.textContent = `✌`;
+        computerScore += 0;
+    } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+        // para.textContent = `You Tie! Both choose ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✊`;
+        comChoice.textContent = `✊`;
+        computerScore += 0;
+    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+        // para.textContent = `You Tie! Both choose ${computerSelection}`;
+        // round.appendChild(para);
+        plyChoice.textContent = `✋`;
+        comChoice.textContent = `✋`;
         computerScore += 0;
     }
 }

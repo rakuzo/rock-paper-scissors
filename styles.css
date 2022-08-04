@@ -1,34 +1,67 @@
+html,
+body {
+    height: 95%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     background-color: black;
     color: blueviolet;
     padding: 10px;
+}
+
+span {
+    font-size: 55px;
+}
+
+.plychoice,
+.comchoice {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+#main {
+    border: 3px solid white;
+    border-radius: 25px;
 }
 
 #container,
 #round,
 #score,
 #result {
-    border: 1px solid white;
-    padding: 10px;
-    flex: 1;
+    /* border: 1px solid white; */
+    padding: 20px;
+    /* flex: 1; */
 }
 
 #container button {
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid #fdc21f;
+    border-radius: 25px;
     color: black;
+    font-size: 85px;
+    width: 150px;
 }
 
 #container {
     min-width: 600px;
     min-height: 150px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #round {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
     min-width: 600px;
     min-height: 50px;
 }
