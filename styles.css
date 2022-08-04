@@ -1,5 +1,6 @@
 html,
 body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 95%;
 }
 
@@ -8,10 +9,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid white; */
     background-color: black;
-    color: blueviolet;
+    color: white;
     padding: 10px;
+    text-align: center;
 }
 
 span {
@@ -25,7 +26,6 @@ span {
     padding: 5px;
     width: 75px;
     height: 75px;
-    text-align: center;
 }
 
 #main {
@@ -37,7 +37,6 @@ span {
 #round,
 #score,
 #result {
-    /* border: 1px solid white; */
     padding: 20px;
     /* flex: 1; */
 }
