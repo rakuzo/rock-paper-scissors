@@ -15,28 +15,38 @@ function getComputerChoice () {
     return randChoice;
 }
 
+const result = document.querySelector('#result')
+const para = document.createElement('p');
+
 //Play 1 round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock" && computerSelection === "Scissor") {
-        console.log("You Win! " + playerSelection + " beat " + computerSelection);
+        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        result.appendChild(para);
         return (1);
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
-        console.log("You Win! " + playerSelection + " beat " + computerSelection);
+        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        result.appendChild(para);
         return (1);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        console.log("You Win! " + playerSelection + " beat " + computerSelection);
+        para.textContent = `You Win! ${playerSelection} beat ${computerSelection}`;
+        result.appendChild(para);
         return (1);
     } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-        console.log("You Draw! " + playerSelection + " draw against " + computerSelection)
+        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
+        result.appendChild(para);
         return (0);
     } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-        console.log("You Draw! " + playerSelection + " draw against " + computerSelection);
+        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
+        result.appendChild(para);
         return (0);
     } else if (playerSelection === "Scissor" && computerSelection === "Scissor") {
-        console.log("You Draw! " + playerSelection + " draw against " + computerSelection);
+        para.textContent = `You Tie! ${playerSelection} draw ${computerSelection}`;
+        result.appendChild(para);
         return (0);
     } else {
-        console.log("You Lose! " + playerSelection + " beaten by " + computerSelection);
+        para.textContent = `You Lose! ${playerSelection} beaten by ${computerSelection}`;
+        result.appendChild(para);
         return (-1);
     }
 }
