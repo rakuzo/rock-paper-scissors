@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@600&family=Roboto:ital,wght@0,400;0,700;1,400&family=Vibur&display=swap');
+
 html,
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 95%;
 }
 
@@ -13,10 +14,15 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
+    font-family: 'Vibur, Roboto, Verdana, sans-serif';
 }
 
 span {
     font-size: 55px;
+}
+
+#header p {
+    font-family: 'Roboto';
 }
 
 .plychoice,
@@ -26,11 +32,13 @@ span {
     padding: 5px;
     width: 75px;
     height: 75px;
+    font-family: 'Noto Emoji';
 }
 
 #main {
     border: 3px solid white;
     border-radius: 25px;
+    animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container,
@@ -44,10 +52,12 @@ span {
 #container button {
     background-color: rgba(0, 0, 0, 0.9);
     border: 3px solid #fdc21f;
+    color: white;
     border-radius: 25px;
-    color: black;
     font-size: 85px;
     width: 150px;
+    font-family: 'Noto Emoji';
+    animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container {
@@ -67,10 +77,45 @@ span {
 
 #score {
     min-width: 600px;
-    min-height: 50px;
+    min-height: 70px;
+    font-size: 20px;
+    font-family: 'Roboto';
 }
 
 #result {
     min-width: 600px;
     min-height: 50px;
+    font-family: 'Roboto';
 }
+
+h1 {
+    font-family: 'Vibur';
+    animation: pulsate 0.11s ease-in-out infinite alternate;    
+  }
+
+@keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    }
+   0% {
+      /* A slightly smaller blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px #f09,
+        0 0 73px #f09,
+        0 0 80px #f09,
+        0 0 94px #f09,
+        0 0 140px #f09;
+    }
+  }
