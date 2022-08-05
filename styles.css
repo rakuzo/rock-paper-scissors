@@ -54,20 +54,16 @@ span {
     border: 3px solid white;
     color: white;
     border-radius: 25px;
-    font-size: 85px;
+    font-size: 80px;
     width: 150px;
+    height: 150px;
     font-family: 'Noto Emoji';
     animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container button:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 3px solid white;
-    color: white;
-    border-radius: 25px;
     font-size: 95px;
-    width: 150px;
-    font-family: 'Noto Emoji';
+    transition: 0.5s;
     animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
@@ -139,6 +135,16 @@ h1 {
               0 0 2.8rem #bc13fe,
               inset 0 0 1.3rem #bc13fe;
 }
+
+.glow-green {
+    box-shadow: 0 0 .1rem #fff,
+              0 0 .1rem #fff,
+              0 0 1rem #1381fe,
+              0 0 0.4rem #1381fe,
+              0 0 1.3rem #1381fe,
+              inset 0 0 0.8rem #1381fe;
+}
+
 
 #glow-yellow {
     box-shadow: 0 0 .2rem #fff,
