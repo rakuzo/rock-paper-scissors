@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll('button');
-
 buttons.forEach(button => button.addEventListener('click', getPlayerChoice));
 
 function getPlayerChoice(e) {
@@ -14,8 +13,6 @@ function getComputerChoice () {
     return randChoice;
 }
 
-const round = document.querySelector('#round');
-const para = document.createElement('p');
 const plyChoice = document.querySelector('.plychoice');
 const comChoice = document.querySelector('.comchoice');
 
