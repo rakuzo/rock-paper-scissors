@@ -38,7 +38,6 @@ span {
 #main {
     border: 4px solid white;
     border-radius: 25px;
-    animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container,
@@ -58,13 +57,11 @@ span {
     width: 150px;
     height: 150px;
     font-family: 'Noto Emoji';
-    animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container button:hover {
     font-size: 95px;
     transition: 0.5s;
-    animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 #container {
